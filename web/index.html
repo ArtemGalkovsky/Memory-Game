@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/style.css">
+	<title>Memory Game</title>
+</head>
+<body>
+	<table class="table">
+		<tr class="rows">
+			<th class="column" data-column="1"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="2"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="3"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="4"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="5"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="6"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="7"><img src="../img/emojis/No BG.webp" alt="error"></th>
+		</tr>
+		<tr class="rows">
+			<th class="column" data-column="8"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="9"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="10"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="11"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="12"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="13"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="14"><img src="../img/emojis/No BG.webp" alt="error"></th>
+		</tr>
+		<tr class="rows">
+			<th class="column" data-column="15"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="16"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="17"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="18"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="19"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="20"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="21"><img src="../img/emojis/No BG.webp" alt="error"></th>
+		</tr>
+		<tr class="rows">
+			<th class="column" data-column="22"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="23"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="24"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="25"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="26"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="27"><img src="../img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="28"><img src="../img/emojis/No BG.webp" alt="error"></th>
+		</tr>
+		<tr class="rows">
+			<th class="column" data-column="29"><img src="img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="30"><img src="img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="31"><img src="img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="32"><img src="img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="33"><img src="img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="34"><img src="img/emojis/No BG.webp" alt="error"></th>
+			<th class="column" data-column="35"><img src="img/emojis/No BG.webp" alt="error"></th>
+		</tr>
+	</table>
+
+	<div class="win_window hide">
+		<div class="win_window__modal">
+			<p class="win_label">YOU WIN!</p>
+			<button class="new_game">Play</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="JS/app.js"></script>
+	<script src="eel.js"></script>
+	<script>
+		eel.get_emojis_files()().then(array => {
+			getEmojis(array)
+		})
+		//console.log(eel.get_emojis_files()().then((array) => {console.log(array)}))
+		//console.log("EEL")
+	</script>
+</body>
+</html>
