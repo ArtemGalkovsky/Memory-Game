@@ -21,44 +21,28 @@ function getEmojis (emojis) {
 	for (let i = 0; i < Math.ceil(columnsList.length / 2); i++) {
  		let emoji = emojis[Math.floor(Math.random() * columnsList.length)] 
 		console.log(emoji)
-		//i % 2 != 0 && columnsList.length % 2 != 0 && i === Coulums ? emojisUse.push(emoji) : emojisUse = emojisUse.concat([emoji, emoji])
+	
 		if (columnsList.length % 2 != 0 && i === Math.floor(columnsList.length / 2)) {
 			emojisUse.push(emoji)
 		} else {
 			emojisUse = emojisUse.concat([emoji, emoji])
 		}
 		emojis.splice(emojis.indexOf(emoji), 1)
-		//console.log(emojis.length)
-		//console.log(emojis.pop(emoji), "D")
-		//console.log(emoji)
-		// emojisUse.push(emoji)
-		// emojisUse
-		//console.log(i, Math.floor(columnsList.length / 2), emoji)
-		//console.log()
 	}
 
 	emojisUse = shuffle(emojisUse)
 
 	console.log(emojis.length)
 
-	//shuffle(emojisUse)
-
 	console.log(emojisUse, "EU")
 
 	columnsList.forEach((item, index) => {
-		//console.log(item, item.textContent, item.firstChild)
-		// item.firstChild.src = emojisUse[index]
+	
 		item.dataset.content = item.firstChild.src = emojisUse[index]
-		//console.log(item.firstChild)
-		//console.log("TC")
-		//console.dir(item)
-		//console.log(item, index, emojisUse[index])
+		
 		console.log(index, emojisUse[index])
-	})//; console.log(item.nextElementSibling); console.log(item.nextElementSibling); console.log(item.nextElementSibling); console.log(item.nextElementSibling); console.log(item.nextElementSibling)})
-	//console.log(emojis)
+	})
 }
-
-// columnsList.forEach((item) => {item.dataset.content = item.nextSibling.src})
 
 function gameStart () {
 
@@ -68,23 +52,17 @@ function gameStart () {
 		item.firstChild.src = item.dataset.content = "../img/emojis/No BG.webp"
 	})
 
-	//console.log(columnsList)
-	//console.dir(columnsList)
-	//console.log(allColumns)
-
 	const columnsCloseTimeout = setTimeout(() => {columnsList.forEach(item => {
 		item.style.transform = 'rotateY(180deg)'
 		item.firstChild.src = "../img/emojis/No BG.webp"
 		item.onclick = () => {click(item)}
-		//console.log("time")
-	})}, 15000)//5000000)
+	})}, 15000)
 
 	clickList = []
 
 }
 
 function click (btn) {
-	//console.log(btn, "click")
 	clickList.push(btn)
 	btn.style.transform = 'rotateY(0deg)'
 	setTimeout(() => {btn.firstChild.src = btn.dataset.content}, 300)
@@ -100,8 +78,6 @@ function click (btn) {
 		clickList[0].onclick = undefined
 		clickList[1].onclick = undefined
 		
-		//columnsList.pop(clickList[0])
-		//columnsList.pop(clickList[1])
 		allColumns.pop(clickList[0])
 		allColumns.pop(clickList[1])
 
@@ -112,7 +88,7 @@ function click (btn) {
 	}
 	console.log(clickList)
 
-	if (allColumns.length < 10) {//(clickList.length === 0) {
+	if (allColumns.length < 10) {
 		console.log("WIN!")
 		columnsList.forEach(item => {
 			item.style.transform = 'rotateY(180deg)' ? item.style.transform = 'rotateY(0deg)' : undefined
@@ -133,15 +109,3 @@ new_game_btn.addEventListener("click", () => {
 
 console.log("START")
 gameStart()
-//let leave_btn = document.querySelector(".leave")
-
-//leave_btn.addEventListener("click", window.top.close())
-
-// function playing (action) {
-
-
-
-// 	//if (action === "stop") {
-// 	//	querySelector(".win_window")
-// 	//}
-// }
