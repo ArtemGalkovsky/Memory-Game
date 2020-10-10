@@ -88,7 +88,7 @@ function click (btn) {
 	}
 	console.log(clickList)
 
-	if (allColumns.length < 10) {
+	if (allColumns.length < 3) {
 		console.log("WIN!")
 		columnsList.forEach(item => {
 			item.style.transform = 'rotateY(180deg)' ? item.style.transform = 'rotateY(0deg)' : undefined
